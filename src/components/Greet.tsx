@@ -1,13 +1,16 @@
 
 
 type GreepType={
-    name:string
+    name:string,
+    messageCount:number
+    isLogged:boolean
 }
 
 function Greet(props:GreepType) {
     return (
         <div>
-              <h2> Hello {props.name} </h2>
+            {props.isLogged? <h2> Hello {props.name} you have {props.messageCount} Messages </h2>:'Hello Guest'}
+             
         </div>
     )
 }
